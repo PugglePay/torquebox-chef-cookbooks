@@ -15,11 +15,11 @@ ENV['PATH'] = "#{ENV['PATH']}:#{ENV['JRUBY_HOME']}/bin"
 package "unzip"
 package "upstart"
 
-user "torquebox" do
-  comment "torquebox"
-  home "/home/torquebox"
-  supports :manage_home => true
-end
+# user "torquebox" do
+#   comment "torquebox"
+#   home "/home/torquebox"
+#   supports :manage_home => true
+# end
 
 install_from_release('torquebox') do
   release_url   node[:torquebox][:url]
