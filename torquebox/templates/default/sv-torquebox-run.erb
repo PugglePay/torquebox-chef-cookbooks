@@ -6,6 +6,6 @@ ulimit -S -n 4096
 chpst -u torquebox %> bash -c 'ulimit -S -a'
 
 export LAUNCH_JBOSS_IN_BACKGROUND="true"
-export JAVA_OPTS='<%= @options[:java][:opts] %>'
+export JAVA_OPTS="<%= @options[:java][:opts] %>"
 
 exec chpst -u torquebox <%= @options[:torquebox_dir] %>/jboss/bin/standalone.sh -b <%= @options[:bind_ip_resolved] %> --server-config <%= @options[:server_config] %> 2>&1
